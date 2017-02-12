@@ -2,6 +2,7 @@ var cool = require('cool-ascii-faces');
 var express = require('express');
 var app = express();
 var engine = require('consolidate');
+app.use(express.static('public'));
 
 app.set('views', __dirname + '/views');
 app.engine('html', engine.mustache);
