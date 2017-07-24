@@ -6,8 +6,10 @@ import { AppServerModuleNgFactory } from '../dist/ngfactory/src/app/app.server.m
 import * as express from 'express';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import * as http from 'http';
 
 const PORT =  process.env.PORT || 8080;
+const HEROKU_APP_URL = 'http://julia-ousse.com';
 
 enableProdMode();
 
@@ -30,6 +32,14 @@ app.get('*.*', express.static(join(__dirname, '..', 'dist')));
 app.get('*', (req, res) => {
   res.render('index', { req });
 });
+
+if(process.env.NODE_ENV === 'production') {
+  setInterval(() =>
+      http.get(HEROKU_APP_URL, (res) => {
+        console.log(res);
+      })
+    , 1000000)
+}
 
 app.listen(PORT, () => {
   console.log(`listening on http://localhost:${PORT}!`);
