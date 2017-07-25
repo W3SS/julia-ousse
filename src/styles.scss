@@ -1,0 +1,28 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'ShellaheraScriptDemo';
+  src:url('./assets/fonts/ShellaheraScriptDemo.ttf.woff') format('woff'),
+  url('./assets/fonts/ShellaheraScriptDemo.ttf.svg#ShellaheraScriptDemo') format('svg'),
+  url('./assets/fonts/ShellaheraScriptDemo.ttf.eot'),
+  url('./assets/fonts/ShellaheraScriptDemo.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OrkneyLight';
+  src: url('./assets/fonts/orkney-light-webfont.eot');
+  src: url('./assets/fonts/orkney-light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/orkney-light-webfont.woff2') format('woff2'),
+  url('./assets/fonts/orkney-light-webfont.woff') format('woff'),
+  url('./assets/fonts/orkney-light-webfont.ttf') format('truetype'),
+  url('./assets/fonts/orkney-light-webfont.svg#orkneylight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}

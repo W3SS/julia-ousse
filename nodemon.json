@@ -9,14 +9,8 @@
   "execMap": {
     "js": "node --harmony"
   },
-  "events": {
-    "restart": "ng build --prod && ngc"
-  },
   "watch": [
-    "src/app/**/*.ts",
-    "src/app/**/*.html",
-    "src/app/**/*.scss",
-    "src/app/**/*.css"
+    "dist/*"
   ],
   "env": {
     "NODE_ENV": "development"

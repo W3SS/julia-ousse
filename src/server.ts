@@ -35,9 +35,7 @@ app.get('*', (req, res) => {
 
 if(process.env.NODE_ENV === 'production') {
   setInterval(() =>
-      http.get(HEROKU_APP_URL, (res) => {
-        console.log(res);
-      })
+      http.get(HEROKU_APP_URL)
     , 1000000)
 }
 

@@ -8,7 +8,7 @@
     "start": "ts-node src/server.ts",
     "build": "ng build",
     "build:universal": "ng build --prod && ngc",
-    "predevelop": "npm run build:universal",
+    "predevelop": "ng build --prod && ngc",
     "develop": "nodemon --exec 'ts-node' src/server.ts",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,8 +25,14 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^4.0.1",
+    "@ngrx/router-store": "^4.0.0",
+    "@ngrx/store": "^4.0.0",
+    "@ngrx/store-devtools": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.4.2",
+    "save": "^2.3.1",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
