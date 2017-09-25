@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  &-title {
+    &__brand {
+      &-name {
+        font-family: 'ShellaheraScriptDemo', sans-serif;
+        color: #302a2a;
+        font-size: 80px;
+        margin: 0;
+      }
+      &-title {
+        font-family: 'OrkneyLight', sans-serif;
+        color: #302a2a;
+        font-size: 16px;
+        text-align: center;
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+}
