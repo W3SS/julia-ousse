@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build --prod && ngc",
+    "postinstall": "npm run build:universal",
     "start": "ts-node src/server.ts",
     "build": "ng build",
     "build:universal": "ng build --prod && ngc",
