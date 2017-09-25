@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "ng",
     "postinstall": "npm run build:universal",
-    "start": "ts-node src/server.ts",
+    "start": "./node_modules/.bin/ts-node src/server.ts",
     "build": "ng build",
-    "build:universal": "ng build --prod && ngc",
+    "build:universal": "./node_modules/.bin/ng build --prod && ./node_modules/.bin/ngc",
     "predevelop": "ng build --prod && ngc",
     "develop": "nodemon --exec 'ts-node' src/server.ts",
     "dev": "ng serve",
