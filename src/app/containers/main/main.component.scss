@@ -1,0 +1,11 @@
+.main {
+  &-image {
+    width: 100%;
+  }
+  &__title {
+    font-size: 26px;
+    text-align: center;
+    font-family: 'DidotBold', sans-serif;
+    margin: 40px 0;
+  }
+}
