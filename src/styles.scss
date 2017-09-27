@@ -493,3 +493,30 @@ html, body
   margin: 0;
   padding: 0;
 }
+
+.background-image-container {
+  background-size: 400% 100%!important;
+  animation: Gradient 1s linear infinite;
+
+  &.background-image-not-loader {
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0.7) 0%,
+      rgba(222,222,222,0.5) 25%,
+      rgba(255,255,255,0.7) 75%,
+      rgba(222,222,222,0.5) 100%);
+  }
+
+  &.background-image-loaded {
+    background-size: cover!important;
+    animation: none;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  100% {
+    background-position: 100% 0%
+  }
+}

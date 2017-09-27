@@ -4,6 +4,7 @@ import { enableProdMode } from '@angular/core'
 import * as express from 'express';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { bundleFileName } from './server.helpers';
 
 // Load zone.js for the server.
 require('zone.js/dist/zone-node');
@@ -13,7 +14,7 @@ var renderModuleFactory = require('@angular/platform-server').renderModuleFactor
 
 // Import the AOT compiled factory for your AppServerModule.
 // This import will change with the hash of your built server bundle.
-var AppServerModuleNgFactory = require('./dist-server/main.7cd25cee23e24389984f.bundle.js').AppServerModuleNgFactory;
+var AppServerModuleNgFactory = require(bundleFileName).AppServerModuleNgFactory;
 
 // Load the index.html file.
 var index = require('fs').readFileSync('./src/index.html', 'utf8');
@@ -30,7 +31,7 @@ app.engine('html', (_, options, callback) => {
   const opts = { document: template, url: options.req.url };
   // Render to HTML and log it to the console.
   renderModuleFactory(AppServerModuleNgFactory,
-    {document: index, url: '/'}).then(html => callback(null, html));
+    opts).then(html => callback(null, html));
 });
 
 app.set('view engine', 'html');
