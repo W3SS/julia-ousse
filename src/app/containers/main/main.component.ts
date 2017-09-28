@@ -7,27 +7,4 @@ import 'rxjs/add/operator/map';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
-
-  show = false;
-
-  items$;
-
-  constructor(public http: Http) { }
-
-  ngOnInit() {
-    this.items$ = this.http.get('https://reqres.in/api/users?page=2')
-      .map(response => response.json())
-      .map(({data}) => data)
-  }
-
-  onLoad() {
-    console.log("LOADED IMAGES!");
-  }
-
-  onClick() {
-    this.show = true;
-    console.log('CLICKED!');
-  }
-
-}
+export class MainComponent {}

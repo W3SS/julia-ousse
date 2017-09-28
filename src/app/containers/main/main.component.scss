@@ -1,12 +1,20 @@
+@import "mixins";
+
 .main {
-  &-image {
-    width: 100%;
-    min-height: 350px;
+  &__image {
+    background: url('../../../assets/images/main-image.png') center center no-repeat;
+    background-size: cover;
+    height: 500px;
+    @include iphone7(null, null, 350px) {}
+    @include iphone6(null, null, 330px) {}
+    @include iphone5(null, null, 260px) {}
   }
   &__title {
     font-size: 26px;
     text-align: center;
+    font-weight: normal;
     font-family: 'DidotBold', sans-serif;
     margin: 40px 0;
+    @include iphone5(22px) {}
   }
 }
