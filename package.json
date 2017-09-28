@@ -1,6 +1,6 @@
 {
   "name": "julia-ousse-universal",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -12,8 +12,12 @@
     "predocker:build": "npm run build:prod",
     "docker:build": "docker build . -t mikesaprykin/julia-ousse",
     "docker:push": "docker push mikesaprykin/julia-ousse",
+    "bump:minor": "ts-node ./bump-version/bump.ts minor",
+    "bump:major": "ts-node ./bump-version/bump.ts major",
+    "bump:patch": "ts-node ./bump-version/bump.ts patch",
     "test": "ng test --single-run --browser PhantomJS --code-coverage",
     "tdd": "ng test --browser PhantomJS",
+    "dev": "ng serve",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
