@@ -1,24 +1,37 @@
+@import "mixins";
+
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  &__logo {
+    @include iphone7(null, 120px);
+    @include iphone6(null, 100px);
+    @include iphone5(null, 80px);
+  }
   &-title {
     &__brand {
       &-name {
         font-family: 'ShellaheraScriptDemo', sans-serif;
         color: #302a2a;
         font-size: 80px;
+        font-weight: normal;
         margin: 0;
+        @include iphone7(100px);
+        @include iphone6(90px);
+        @include iphone6(80px);
       }
       &-title {
         font-family: 'OrkneyLight', sans-serif;
         color: #302a2a;
-        font-size: 16px;
         text-align: center;
+        font-weight: normal;
         margin: 0 0 20px 0;
+        @include iphone7(18px);
       }
     }
   }
 }
+
