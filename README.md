@@ -37,3 +37,7 @@ Different modern technologies were used, while building the project:
 * [Codecov](https://codecov.io) - Code coverage tool
 * [Bithound](https://www.bithound.io/) - dependencies checking tool
 * [Code Climage](https://codeclimate.com/) - Code quality analyzing tool 
+
+# TODO's
+* [ ] Finish readme with project folder structure
+* [ ] Finish readme with scripts
