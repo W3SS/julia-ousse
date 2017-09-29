@@ -1,0 +1,34 @@
+@import "screens";
+
+@mixin screen-props-mixin($fontSize, $width, $height) {
+  width: $width;
+  height: $height;
+  font-size: $fontSize;
+}
+
+@mixin mediaMaxWidthMixin($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin iphone7($fontSize: null, $width: null, $height: null) {
+  @include mediaMaxWidthMixin(map-get($iphone7, width)) {
+    @include screen-props-mixin($fontSize, $width, $height);
+    @content;
+  }
+}
+
+@mixin iphone6($fontSize: null, $width: null, $height: null) {
+  @include mediaMaxWidthMixin(map-get($iphone6, width)) {
+    @include screen-props-mixin($fontSize, $width, $height);
+    @content;
+  }
+}
+
+@mixin iphone5($fontSize: null, $width: null, $height: null) {
+  @include mediaMaxWidthMixin(map-get($iphone5, width)) {
+    @include screen-props-mixin($fontSize, $width, $height);
+    @content;
+  }
+}
