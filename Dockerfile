@@ -1,11 +1,11 @@
-FROM node:7.10-slim
+FROM node:8.6-alpine
 
 RUN mkdir -p /usr/julia-ousse
 
 ADD . /usr/julia-ousse
 
 WORKDIR /usr/julia-ousse
-RUN npm install
+RUN npm install --only=production
 
 RUN ls -la
 
