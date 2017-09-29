@@ -1,28 +1,43 @@
-# JuliaOusseUniversal
+# Julia Ousse Web Site | Version: v0.0.4
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0-rc.0.
+[![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/MikeSaprykin/angular-cli-universal)
+[![CircleCI](https://circleci.com/gh/MikeSaprykin/julia-ousse/tree/master.svg?style=svg)](https://circleci.com/gh/MikeSaprykin/julia-ousse/tree/master)
+[![codecov](https://codecov.io/gh/MikeSaprykin/julia-ousse/branch/master/graph/badge.svg)](https://codecov.io/gh/MikeSaprykin/julia-ousse)
+[![Code Climate](https://codeclimate.com/github/MikeSaprykin/julia-ousse/badges/gpa.svg)](https://codeclimate.com/github/MikeSaprykin/julia-ousse)
+[![bitHound Code](https://www.bithound.io/github/MikeSaprykin/julia-ousse/badges/code.svg)](https://www.bithound.io/github/MikeSaprykin/julia-ousse)
+[![bitHound Dependencies](https://www.bithound.io/github/MikeSaprykin/julia-ousse/badges/dependencies.svg)](https://www.bithound.io/github/MikeSaprykin/julia-ousse/master/dependencies/npm)
+[![bitHound Dev Dependencies](https://www.bithound.io/github/MikeSaprykin/julia-ousse/badges/devDependencies.svg)](https://www.bithound.io/github/MikeSaprykin/julia-ousse/master/dependencies/npm)
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+> A Julia Ousse Make up artist website hosted on [julia-ousse.com](julia-ousse.com)
 
-## Code scaffolding
+> Front-end is built with different tools in a modern Web Stack of technologies.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+> APP was designed as Single Page Application using latest Angular, but with SEO optimization in mind,
+as it is important for such kind of web site and for customers. Therefore Server Side Rendering
+tool was used - Angular Universal.
 
-## Build
+## Tech Stack
+Different modern technologies were used, while building the project:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+* [TypeScript](https://www.typescriptlang.org/) - primary programming language
+* [Angular](https://angular.io/) - core client side framework
+* [Angular-CLI](https://cli.angular.io/) - bundling, testing and utility CLI tool from Angular team
+* [Angular Universal](https://universal.angular.io/) - isomorphic way to serve the application with pre-rendered template
+* [NgRX](https://github.com/ngrx) - core client side state management strategy
+* [RxJS](https://github.com/Reactive-Extensions/RxJS) - reactive extension javascript library for FRP style of programming
+* [NodeJS ](https://nodejs.org/en/) - JavaScript server framework to serve pre-rendered application
+* [ExpressJS](http://expressjs.com/) - NodeJS framework to simplify server application building 
+* [Karma](https://karma-runner.github.io/1.0/index.html) - unit tests runner
+* [Jasmine](https://jasmine.github.io/) - core testing framework
+* [Protractor](http://www.protractortest.org/#/) - end-to-end testing tool
+* [CircleCI](https://circleci.com) - Continuous integration tool
+* [Docker](https://www.docker.com/) - Predictable container for deployment and running the app
+* [Codecov](https://codecov.io) - Code coverage tool
+* [Bithound](https://www.bithound.io/) - dependencies checking tool
+* [Code Climage](https://codeclimate.com/) - Code quality analyzing tool 
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# TODO's
+* [ ] Finish readme with project folder structure
+* [ ] Finish readme with scripts
