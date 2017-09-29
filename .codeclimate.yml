@@ -3,9 +3,8 @@ engines:
       enabled: true
       channel: beta
       config: tslint.json
-  eslint:
-      enabled: false
 
 ratings:
    paths:
-   - "src/**/*.ts"
+   - src/**/*
+   - "**.ts"
