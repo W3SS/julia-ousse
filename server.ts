@@ -1,10 +1,11 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone-node';
-import { enableProdMode } from '@angular/core'
+import { enableProdMode } from '@angular/core';
 import * as express from 'express';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 import { bundleFileName } from './server.helpers';
+import * as compression from 'compression';
 
 // Load zone.js for the server.
 require('zone.js/dist/zone-node');
@@ -21,8 +22,9 @@ const PORT =  process.env.PORT || 8080;
 enableProdMode();
 
 const app = express();
+app.use(compression());
 
-let template = readFileSync(join(__dirname, 'dist', 'index.html')).toString();
+const template = readFileSync(join(__dirname, 'dist', 'index.html')).toString();
 
 app.engine('html', (_, options, callback) => {
   const opts = { document: template, url: options.req.url };
