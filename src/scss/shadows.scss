@@ -1,0 +1,68 @@
+$elevation-1: 0 1px 3px rgba(0,0,0, .10), 0 1px 2px rgba(0,0,0, .18);
+$elevation-1-hover: 0 1px 3px rgba(0,0,0, .14), 0 1px 2px rgba(0,0,0, .22);
+
+$elevation-2: 0 3px 6px rgba(0,0,0, .16), 0 3px 6px rgba(0,0,0, .22);
+$elevation-2-hover: 0 3px 6px rgba(0,0,0, .20), 0 3px 6px rgba(0,0,0, .26);
+
+$elevation-3: 0 8px 18px rgba(0,0,0, .18), 0 6px 6px rgba(0,0,0, .23);
+$elevation-3-hover: 0 8px 18px rgba(0,0,0, .22), 0 6px 6px rgba(0,0,0, .26);
+
+$elevation-4: 0 14px 28px rgba(0,0,0, .26), 0 10px 10px rgba(0,0,0, .22);
+
+$elevation-5: 0 19px 38px rgba(0,0,0, .28), 0 15px 12px rgba(0,0,0, .22);
+
+@mixin shadow-transition() {
+  transition: box-shadow .28s cubic-bezier(.4,0,.2,1);
+}
+
+@mixin elevation-1() {
+
+  box-shadow: $elevation-1;
+
+  @include shadow-transition();
+
+  &:hover {
+    box-shadow: $elevation-1-hover;
+  }
+
+}
+
+@mixin elevation-2() {
+
+  box-shadow: $elevation-2;
+
+  @include shadow-transition();
+
+  &:hover {
+    box-shadow: $elevation-2-hover;
+  }
+
+}
+
+@mixin elevation-3() {
+
+  box-shadow: $elevation-3;
+
+  @include shadow-transition();
+
+  &:hover {
+    box-shadow: $elevation-3-hover;
+  }
+
+}
+
+@mixin elevation-4() {
+
+  @include shadow-transition();
+
+  box-shadow: $elevation-4;
+
+}
+
+@mixin elevation-5() {
+
+  @include shadow-transition();
+
+  box-shadow: $elevation-5;
+
+}

@@ -1,0 +1,49 @@
+@import "animations";
+@import "colors";
+@import "shadows";
+
+.side-bar {
+  width: 0;
+  position: absolute;
+  background: white;
+  transition: $linear;
+  top: 0;
+
+  &.active {
+    width: 75%;
+    box-shadow: $elevation-1-hover;
+  }
+
+  &__item {
+    font-family: 'CenturyGothic', sans-serif;
+    text-transform: uppercase;
+    color: $bar-color;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 0;
+    padding: .9rem 2rem;
+    transition: $linear;
+    border-top: 1px solid $bar-color;
+    &:hover {
+      color: white;
+      background: $bar-color;
+    }
+    p {
+      margin: 0;
+    }
+  }
+
+  &-social-icons {
+    border-top: 2px solid $bar-color;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    &__item {
+      cursor: pointer;
+      margin: 0 .2rem;
+    }
+    border-bottom: 1px solid $bar-color;
+  }
+
+}

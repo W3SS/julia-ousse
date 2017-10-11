@@ -12,7 +12,7 @@
   &__logo {
     @include iphone7(null, 130px);
     @include iphone6(null, 110px);
-    @include iphone5(null, 90px);
+    @include iphone5(null, 70px);
   }
   &-title {
     &__brand {
@@ -28,8 +28,8 @@
         @include iphone6(80px) {
           line-height: 60px;
         };
-        @include iphone5(60px) {
-          line-height: 50px;
+        @include iphone5(50px) {
+          line-height: 40px;
         };
       }
       &-title {
@@ -40,7 +40,9 @@
         margin: 0 0 20px 0;
         @include iphone7(18px);
         @include iphone6(15px);
-        @include iphone5(12px);
+        @include iphone5(12px) {
+          margin-bottom: 10px;
+        };
       }
     }
   }
@@ -49,7 +51,7 @@
     position: relative;
     .header-hamburger {
       position: absolute;
-      bottom: 15px;
+      bottom: 10px;
       right: 10px;
     }
   }

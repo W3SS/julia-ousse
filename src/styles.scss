@@ -26,6 +26,18 @@ html, body {
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'CenturyGothic';
+  src: url('./assets/fonts/CenturyGothic.eot?#iefix') format('embedded-opentype'),
+  url('./assets/fonts/CenturyGothic.woff') format('woff'),
+  url('./assets/fonts/CenturyGothic.ttf')  format('truetype'),
+  url('./assets/fonts/CenturyGothic.svg#CenturyGothic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 @font-face {
   font-family: 'OrkneyLight';
   src: url('./assets/fonts/orkney-light-webfont.eot');
