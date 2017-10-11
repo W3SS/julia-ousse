@@ -1,3 +1,13 @@
+@import "mixins";
+
+app-root {
+  display: block;
+  margin: 0 auto;
+  @include mediaMinWidthMixin(420px) {
+    width: 420px;
+  }
+}
+
 /* You can add global styles to this file, and also import other style files */
 html, body {
   margin: 0;
