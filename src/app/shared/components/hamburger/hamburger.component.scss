@@ -1,0 +1,40 @@
+@import "colors";
+@import "mixins";
+
+.hamburger {
+  cursor: pointer;
+  @include no-user-select();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 30px;
+  width: 35px;
+  position: relative;
+  overflow: hidden;
+  z-index: 120;
+  transform: translate3d(0, 0, 0);
+
+  &__bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 2px 0;
+    background: $hamburger-bar-color;
+    transition: all 0.1s ease-in-out;
+    opacity: 1;
+  }
+
+  &.active {
+      .hamburger__bar:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+      .hamburger__bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger__bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+    }
+
+}

@@ -10,9 +10,9 @@
     padding-top: 10px;
   }
   &__logo {
-    @include iphone7(null, 120px);
-    @include iphone6(null, 95px);
-    @include iphone5(null, 80px);
+    @include iphone7(null, 130px);
+    @include iphone6(null, 110px);
+    @include iphone5(null, 90px);
   }
   &-title {
     &__brand {
@@ -20,11 +20,17 @@
         font-family: 'ShellaheraScriptDemo', sans-serif;
         color: #302a2a;
         font-size: 80px;
+        line-height: 60px;
+        text-align: center;
         font-weight: normal;
         margin: 0;
         @include iphone7(100px);
-        @include iphone6(80px);
-        @include iphone5(60px);
+        @include iphone6(80px) {
+          line-height: 60px;
+        };
+        @include iphone5(60px) {
+          line-height: 50px;
+        };
       }
       &-title {
         font-family: 'OrkneyLight', sans-serif;
@@ -33,7 +39,18 @@
         font-weight: normal;
         margin: 0 0 20px 0;
         @include iphone7(18px);
+        @include iphone6(15px);
+        @include iphone5(12px);
       }
+    }
+  }
+  &-bottom-block {
+    width: 100%;
+    position: relative;
+    .header-hamburger {
+      position: absolute;
+      bottom: 15px;
+      right: 10px;
     }
   }
 }
