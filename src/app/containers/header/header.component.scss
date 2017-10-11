@@ -10,6 +10,7 @@
     padding-top: 10px;
   }
   &__logo {
+    width: 130px;
     @include iphone7(null, 130px);
     @include iphone6(null, 100px);
     @include iphone5(null, 70px);

@@ -12,6 +12,12 @@
   }
 }
 
+@mixin mediaMinWidthMixin($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
 @mixin iphone7($fontSize: null, $width: null, $height: null) {
   @include mediaMaxWidthMixin(map-get($iphone7, width)) {
     @include screen-props-mixin($fontSize, $width, $height);
