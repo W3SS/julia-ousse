@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header';
 import { MainComponent } from './main/main.component';
 import { DirectivesModule } from '../shared/directives';
+import { ComponentsModule } from '../shared/components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
-    DirectivesModule
+    DirectivesModule,
+    ComponentsModule
   ],
   declarations: [
     HeaderComponent,

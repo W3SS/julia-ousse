@@ -1,12 +1,15 @@
-import * as fromRouter from '@ngrx/router-store';
 import { ActionReducerMap } from '@ngrx/store';
+import {
+  layoutReducer,
+  LayoutState
+} from './layout';
 
-export interface State {
-  routerReducer: fromRouter.RouterReducerState;
+export interface AppState {
+  layout: LayoutState;
 }
 
-export const reducers: ActionReducerMap<State> = {
-  routerReducer: fromRouter.routerReducer
+export const reducers: ActionReducerMap<AppState> = {
+  layout: layoutReducer
 };
 
 
