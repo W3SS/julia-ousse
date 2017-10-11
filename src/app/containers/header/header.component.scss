@@ -6,9 +6,12 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  @include iphone6() {
+    padding-top: 10px;
+  }
   &__logo {
     @include iphone7(null, 120px);
-    @include iphone6(null, 100px);
+    @include iphone6(null, 95px);
     @include iphone5(null, 80px);
   }
   &-title {
@@ -20,8 +23,8 @@
         font-weight: normal;
         margin: 0;
         @include iphone7(100px);
-        @include iphone6(90px);
         @include iphone6(80px);
+        @include iphone5(60px);
       }
       &-title {
         font-family: 'OrkneyLight', sans-serif;
