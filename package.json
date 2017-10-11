@@ -1,6 +1,6 @@
 {
   "name": "julia-ousse-universal",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -58,11 +58,10 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.4.5",
-    "@types/jasmine": "^2.5.54",
-    "@types/jasminewd2": "^2.0.3",
     "@types/jest": "^21.1.2",
     "@types/node": "^6.0.88",
     "@types/ramda": "^0.24.16",
+    "codecov": "^2.3.0",
     "codelyzer": "^3.2.1",
     "jest": "^21.2.1",
     "jest-preset-angular": "^4.0.0",
