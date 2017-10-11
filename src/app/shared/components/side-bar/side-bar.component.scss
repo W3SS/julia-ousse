@@ -1,0 +1,73 @@
+@import "animations";
+@import "colors";
+@import "shadows";
+@import "mixins";
+
+.side-bar {
+  width: 0;
+  position: absolute;
+  background: white;
+  transition: $linear;
+  top: 0;
+  overflow: hidden;
+
+  &.active {
+    width: 75%;
+    box-shadow: $elevation-1-hover;
+    .side-bar-item {
+      &__text {
+        transition: $linear;
+        font-size: 13px;
+        @include iphone7() {
+          font-size: 14px;
+        }
+      }
+    }
+    .side-bar-social-icons {
+      &__item {
+        visibility: visible;
+      }
+    }
+  }
+
+  &-item {
+    font-family: 'CenturyGothic', sans-serif;
+    text-transform: uppercase;
+    color: $bar-color;
+    cursor: pointer;
+    font-size: 13px;
+    margin: 0;
+    padding: .9rem 2rem;
+    transition: $linear;
+    border-top: 1px solid $bar-color;
+
+    @include iphone7(){
+      padding: 1rem 2rem;
+    }
+
+    &:hover, &.active {
+      color: white;
+      background: $bar-color;
+    }
+    &__text {
+      transition: $linear;
+      margin: 0;
+      font-size: 0;
+    }
+  }
+
+  &-social-icons {
+    border-top: 2px solid $bar-color;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    &__item {
+      visibility: hidden;
+      cursor: pointer;
+      margin: 0 .2rem;
+    }
+    border-bottom: 1px solid $bar-color;
+  }
+
+}

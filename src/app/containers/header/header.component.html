@@ -2,12 +2,19 @@
   <img class="header__logo"
        src="../../../assets/images/logo.png"
        alt="Julia Ousse Logo">
-  <div class="header-title">
-    <h1 class="header-title__brand-name">
-      Julia Ousse
-    </h1>
-    <h2 class="header-title__brand-title">
-      MAKEUP & BEAUTY
-    </h2>
+  <div class="header-bottom-block">
+    <div class="header-title">
+      <h1 class="header-title__brand-name">
+        Julia Ousse
+      </h1>
+      <h2 class="header-title__brand-title">
+        MAKEUP & BEAUTY
+      </h2>
+    </div>
+    <div class="header-hamburger">
+      <hamburger (onHamburgerClick)="toggleSideBar()"
+                 [active]="sideBarOpen | async">
+      </hamburger>
+    </div>
   </div>
 </header>
