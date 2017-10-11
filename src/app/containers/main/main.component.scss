@@ -6,7 +6,7 @@
     position: relative;
     background: url('../../../assets/images/main-image.png') center center no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 400px;
     @include iphone7(null, null, 345px) {}
     @include iphone6(null, null, 320px) {}
     @include iphone5(null, null, 280px) {}
