@@ -12,8 +12,8 @@
       </h2>
     </div>
     <div class="header-hamburger">
-      <hamburger (onHamburgerClick)="active = !active"
-                 [active]="active">
+      <hamburger (onHamburgerClick)="toggleSideBar()"
+                 [active]="sideBarOpen | async">
       </hamburger>
     </div>
   </div>

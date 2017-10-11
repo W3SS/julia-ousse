@@ -1,6 +1,6 @@
 <main class="main">
   <div class="main__image">
-    <side-bar [active]="true">
+    <side-bar [active]="sideBarOpen$ | async">
     </side-bar>
   </div>
   <h3 class="main__title">YOUR BEAUTY.YOUR CHOICE.</h3>
