@@ -1,14 +1,30 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainComponent } from './main.component';
+import {Store} from '@ngrx/store';
 
 describe('MainComponent', () => {
   let component: MainComponent;
   let fixture: ComponentFixture<MainComponent>;
 
+  class MockStore {
+    select() {}
+  }
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainComponent ]
+      declarations: [ MainComponent ],
+      providers: [
+        {
+          provide: Store,
+          useClass: MockStore
+        }
+      ]
+    })
+    .overrideComponent( MainComponent, {
+      set: {
+        template: '<div></div>'
+      }
     })
     .compileComponents();
   }));
