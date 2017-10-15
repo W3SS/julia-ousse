@@ -7,64 +7,65 @@
   width: 0;
   position: absolute;
   background: white;
-  transition: $linear;
+  transition: $all-ease-in-out;
   top: 0;
   overflow: hidden;
 
   &.active {
     width: 75%;
     box-shadow: $elevation-1-hover;
-    .side-bar-item {
-      &__text {
-        transition: $linear;
-        font-size: 13px;
-        @include iphone7() {
-          font-size: 14px;
-        }
-      }
-    }
     .side-bar-social-icons {
       &__item {
-        visibility: visible;
+        opacity: 1;
       }
     }
   }
 
   &-item {
+    height: 40px;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
     font-family: 'CenturyGothic', sans-serif;
     text-transform: uppercase;
     color: $bar-color;
     cursor: pointer;
     font-size: 13px;
     margin: 0;
-    padding: .9rem 2rem;
+    padding: 0 2rem;
     transition: $linear;
     border-top: 1px solid $bar-color;
 
     @include iphone7(){
       padding: 1rem 2rem;
+      height: 30px;
     }
 
-    &:hover, &.active {
+    &:hover, &.active, &:focus, &:active {
       color: white;
       background: $bar-color;
     }
     &__text {
       transition: $linear;
       margin: 0;
-      font-size: 0;
+      font-size: 13px;
+      @include iphone7() {
+        font-size: 14px;
+      }
     }
   }
 
   &-social-icons {
+    min-width: 200px;
     border-top: 2px solid $bar-color;
     display: flex;
     padding: 1rem;
     justify-content: center;
     align-items: center;
     &__item {
-      visibility: hidden;
       cursor: pointer;
+      opacity: 0;
+      @include all-cubic-bezier(.05s);
       margin: 0 .2rem;
     }
     border-bottom: 1px solid $bar-color;
