@@ -38,9 +38,10 @@
 
     @include iphone7(){
       padding: 1rem 2rem;
+      height: 30px;
     }
 
-    &:hover, &.active {
+    &:hover, &.active, &:focus, &:active {
       color: white;
       background: $bar-color;
     }

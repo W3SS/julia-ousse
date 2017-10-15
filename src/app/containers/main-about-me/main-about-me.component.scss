@@ -2,6 +2,8 @@
 
 .main-about-me {
 
+  padding-bottom: .5rem;
+
   .description-block {
     text-align: center;
     background: $bar-color;
@@ -32,6 +34,12 @@
       font-size: 26px;
       text-align: center;
     }
+  }
+
+  &-button {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
   }
 
 }
