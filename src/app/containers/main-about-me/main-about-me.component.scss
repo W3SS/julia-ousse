@@ -1,0 +1,37 @@
+@import "colors";
+
+.main-about-me {
+
+  .description-block {
+    text-align: center;
+    background: $bar-color;
+    padding: 1rem .5rem;
+    &__text {
+      font-size: 14px;
+      line-height: 18px;
+      font-family: 'OrkneyLight', sans-serif;
+      color: #fff;
+    }
+  }
+
+  &-image {
+    margin-top: 2rem;
+  }
+
+  &-quote {
+    font-family: 'Allura', cursive;
+    &__text {
+      margin: 1rem 0 0;
+      padding: 0 1rem;
+      font-weight: 400;
+      font-size: 24px;
+    }
+    &__name {
+      margin: 0;
+      font-weight: 400;
+      font-size: 26px;
+      text-align: center;
+    }
+  }
+
+}
