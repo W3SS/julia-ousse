@@ -1,6 +1,6 @@
 //Transitions
 @mixin all-cubic-bezier($sec){
-  transition:all $sec cubic-bezier(.25,.8,.25,1);
+  transition: all $sec cubic-bezier(.25,.8,.25,1);
 }
 
 $linear: all .10s linear;

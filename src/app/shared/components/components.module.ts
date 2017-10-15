@@ -1,19 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
 import { HamburgerComponent } from './hamburger';
 import { SideBarComponent } from './side-bar';
+import { ButtonLinkComponent } from './button-link';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   declarations: [
     HamburgerComponent,
-    SideBarComponent
+    SideBarComponent,
+    ButtonLinkComponent
   ],
   exports: [
     HamburgerComponent,
-    SideBarComponent
+    SideBarComponent,
+    ButtonLinkComponent
   ]
 })
 export class ComponentsModule { }
