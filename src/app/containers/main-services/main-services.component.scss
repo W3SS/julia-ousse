@@ -1,0 +1,72 @@
+@import "colors";
+@import "mixins";
+
+.main-services {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  @include iphone5() {
+    padding-bottom: 1rem;
+  }
+  &-anchor {
+    text-align: center;
+  }
+  &-video {
+    margin-bottom: 1.5rem;
+    position: relative;
+    min-height: 390px;
+    @include iphone6() {
+      min-height: 350px;
+    }
+    @include iphone5() {
+      min-height: 300px;
+    }
+    &-overlay {
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      &__button {
+        background: url(../../../assets/images/video-overlay-button.png) center center no-repeat;
+        background-size: contain;
+        width: 100px;
+        height: 50px;
+        top: 45%;
+        left: 40%;
+        @include no-user-select();
+        position: absolute;
+      }
+    }
+    &__item {
+      min-height: 380px;
+      @include iphone6() {
+        min-height: 340px;
+      }
+      @include iphone5() {
+        min-height: 290px;
+      }
+    }
+    @include iphone5() {
+      margin-bottom: .5rem;
+    }
+  }
+  &-header {
+    text-align: center;
+    background: $bar-color;
+    padding: 1rem .5rem;
+    @include iphone5() {
+      padding: .7rem .3rem;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 20px;
+      font-family: 'OrkneyLight', sans-serif;
+      color: #fff;
+      @include iphone6(14px) {
+        line-height: 18px;
+      }
+      @include iphone5(13px) {
+        line-height: 17px;
+      }
+    }
+    margin-bottom: 2rem;
+  }
+}
