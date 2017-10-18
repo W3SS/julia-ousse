@@ -10,7 +10,12 @@ describe('MainPortfolioComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ MainPortfolioComponent ]
     })
-    .compileComponents();
+      .overrideComponent(MainPortfolioComponent, {
+        set: {
+          template: '<div></div>'
+        }
+      })
+      .compileComponents();
   }));
 
   beforeEach(() => {
