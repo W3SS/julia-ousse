@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header';
-import { MainComponent } from './main/main.component';
 import { DirectivesModule } from '../shared/directives';
-import { ComponentsModule } from '../shared/components/components.module';
+import { ComponentsModule } from '../shared/components';
+
 import { MainAboutMeComponent } from './main-about-me';
 import { MainPortfolioComponent } from './main-portfolio';
+import { MainServicesComponent } from './main-services';
+import { HeaderComponent } from './header';
+import { MainComponent } from './main';
+import { FooterComponent } from './footer';
 
 @NgModule({
   imports: [
@@ -17,11 +20,14 @@ import { MainPortfolioComponent } from './main-portfolio';
     HeaderComponent,
     MainComponent,
     MainAboutMeComponent,
-    MainPortfolioComponent
+    MainPortfolioComponent,
+    MainServicesComponent,
+    FooterComponent
   ],
   exports: [
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent
   ]
 })
 export class ContainersModule { }

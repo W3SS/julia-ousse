@@ -1,0 +1,30 @@
+<section class="main-services">
+  <div class="main-services-header">
+    <p class="main-services-header__text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+      sed do eiusmod tempor incididunt ut labore
+      et dolore magna aliqua.
+    </p>
+  </div>
+  <div class="main-services-video">
+    <div class="main-services-video-overlay"
+         (click)="showMainPageVideo()"
+         *ngIf="!(mainPageVideo$ | async); else video">
+      <div class="main-services-video-overlay__button">
+      </div>
+      <img src="../assets/images/video-overlay.jpg" width="100%" height="100%"/>
+    </div>
+    <ng-template #video>
+      <iframe class="main-services-video__item"
+              width="100%" height="100%"
+              src="//www.youtube.com/embed/GOawOjFLQC4?autoplay=1"
+              frameborder="0" allowfullscreen>
+      </iframe>
+    </ng-template>
+  </div>
+  <div class="main-services-anchor">
+    <button-link>
+      УСЛУГИ
+    </button-link>
+  </div>
+</section>
