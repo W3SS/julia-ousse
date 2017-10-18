@@ -8,6 +8,7 @@ import { MainPortfolioComponent } from './main-portfolio';
 import { MainServicesComponent } from './main-services';
 import { HeaderComponent } from './header';
 import { MainComponent } from './main';
+import { FooterComponent } from './footer';
 
 @NgModule({
   imports: [
@@ -20,11 +21,13 @@ import { MainComponent } from './main';
     MainComponent,
     MainAboutMeComponent,
     MainPortfolioComponent,
-    MainServicesComponent
+    MainServicesComponent,
+    FooterComponent
   ],
   exports: [
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent
   ]
 })
 export class ContainersModule { }
