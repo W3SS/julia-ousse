@@ -1,0 +1,41 @@
+@import "colors";
+@import "mixins";
+
+.main-portfolio {
+  margin-top: 1rem;
+  padding-bottom: 2rem;
+  @include iphone5() {
+    padding-bottom: 1rem;
+  }
+
+  &-header {
+    text-align: center;
+    background: $bar-color;
+    padding: 1rem .5rem;
+    @include iphone5() {
+      padding: .7rem .3rem;
+    }
+    &__text {
+      font-size: 17px;
+      line-height: 20px;
+      font-family: 'OrkneyLight', sans-serif;
+      color: #fff;
+      @include iphone6(14px) {
+        line-height: 18px;
+      }
+      @include iphone5(13px) {
+        line-height: 17px;
+      }
+    }
+  }
+  &-anchor {
+    text-align: center;
+  }
+  &-image {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    @include iphone5() {
+      margin-bottom: .5rem;
+    }
+  }
+}
