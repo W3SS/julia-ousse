@@ -5,6 +5,7 @@ import { MainComponent } from './main/main.component';
 import { DirectivesModule } from '../shared/directives';
 import { ComponentsModule } from '../shared/components/components.module';
 import { MainAboutMeComponent } from './main-about-me';
+import { MainPortfolioComponent } from './main-portfolio';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { MainAboutMeComponent } from './main-about-me';
   declarations: [
     HeaderComponent,
     MainComponent,
-    MainAboutMeComponent
+    MainAboutMeComponent,
+    MainPortfolioComponent
   ],
   exports: [
     HeaderComponent,

@@ -4,7 +4,7 @@
   position: relative;
   &__image {
     position: relative;
-    background: url('../../../assets/images/main-image.png') center center no-repeat;
+    background: url('../../../assets/images/main-image.jpg') center center no-repeat;
     background-size: cover;
     height: 400px;
     @include iphone7(null, null, 345px) {}
