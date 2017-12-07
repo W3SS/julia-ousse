@@ -1,4 +1,4 @@
-# Julia Ousse Web Site | Version: v0.0.10
+# Julia Ousse Web Site | Version: v0.0.11
 
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/MikeSaprykin/angular-cli-universal)
 [![CircleCI](https://circleci.com/gh/MikeSaprykin/julia-ousse/tree/master.svg?style=svg)](https://circleci.com/gh/MikeSaprykin/julia-ousse/tree/master)
