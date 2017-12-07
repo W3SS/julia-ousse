@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs/Observable';
@@ -11,13 +11,17 @@ import { AnalyticsService } from '../../services';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
+export class MainComponent implements OnInit {
 
   sideBarOpen$: Observable<boolean>;
 
   constructor(public store: Store<AppState>,
               private analytics: AnalyticsService) {
     this.sideBarOpen$ = store.select(selectSideBar);
+  }
+
+  ngOnInit() {
+    this.analytics.pageView('/index.html');
   }
 
 }

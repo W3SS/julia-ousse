@@ -1,6 +1,6 @@
 {
   "name": "julia-ousse-universal",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -12,6 +12,7 @@
     "predocker:build": "npm run build:prod",
     "docker:build": "docker build . -t mikesaprykin/julia-ousse",
     "docker:push": "docker push mikesaprykin/julia-ousse",
+    "bump": "npm run bump:patch",
     "bump:minor": "ts-node ./bump-version/bump.ts minor",
     "bump:major": "ts-node ./bump-version/bump.ts major",
     "bump:patch": "ts-node ./bump-version/bump.ts patch",
