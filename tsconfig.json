@@ -9,8 +9,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "target": "es5",
+    "module": "commonjs",
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "src/typings.d.ts"
     ],
     "lib": [
       "es2016",

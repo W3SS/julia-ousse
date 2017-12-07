@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainComponent } from './main.component';
 import {Store} from '@ngrx/store';
+import {AnalyticsService} from '../../services/analytics.service';
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -11,6 +12,10 @@ describe('MainComponent', () => {
     select() {}
   }
 
+  class MockAnalytics {
+    pageView() {}
+  }
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ MainComponent ],
@@ -18,6 +23,10 @@ describe('MainComponent', () => {
         {
           provide: Store,
           useClass: MockStore
+        },
+        {
+          provide: AnalyticsService,
+          useClass: MockAnalytics
         }
       ]
     })
