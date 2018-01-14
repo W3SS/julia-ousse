@@ -2,8 +2,13 @@
 @import "shadows";
 
 .app-footer {
-  display: block;
-  background: $bar-color;
+  //display: block;
+  //position: fixed;
+  //bottom: 0;
+  //left: 0;
+  //right: 0;
+  //background: $bar-color;
+  background-image: linear-gradient(to right, #221e1e, #292424, #302a2a, #373030, #3e3636);
   .footer-social-icons {
     display: flex;
     width: 100%;

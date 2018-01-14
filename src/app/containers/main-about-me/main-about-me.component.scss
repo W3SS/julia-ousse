@@ -11,7 +11,8 @@
 
   .description-block {
     text-align: center;
-    background: $bar-color;
+    //background: $bar-color;
+    background-image: linear-gradient(to right, #221e1e, #292424, #302a2a, #373030, #3e3636);
     padding: 1rem .5rem;
     @include iphone5() {
       padding: .7rem .3rem;
@@ -31,14 +32,14 @@
   }
 
   &-image {
-    margin-top: 2rem;
     @include iphone5() {
       margin-top: 1.5rem;
     }
   }
 
   &-quote {
-    font-family: 'Allura', cursive;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
     &__text {
       margin: 1rem 0 0;
       padding: 0 1rem;
@@ -50,11 +51,12 @@
       }
     }
     &__name {
-      margin: 0;
+      font-family: 'Allura', cursive;
+      margin: 1rem 1.5rem;
       font-weight: 400;
       @include iphone7(28px){}
       font-size: 26px;
-      text-align: center;
+      text-align: right;
     }
   }
 

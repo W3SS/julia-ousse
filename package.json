@@ -9,7 +9,7 @@
     "build:client": "ng build -prod --build-optimizer --app 0",
     "build:aot": "ng build --aot --app 1",
     "build:server": "webpack -p",
-    "develop": "node dist/server.js",
+    "develop": "ng serve --aot",
     "serve": "node dist/server.js",
     "predocker:build": "npm run build",
     "docker:build": "docker build . -t mikesaprykin/julia-ousse",

@@ -50,7 +50,8 @@
   }
   &-header {
     text-align: center;
-    background: $bar-color;
+    //background: $bar-color;
+    background-image: linear-gradient(to right, #221e1e, #292424, #302a2a, #373030, #3e3636);
     padding: 1rem .5rem;
     @include iphone5() {
       padding: .7rem .3rem;
@@ -67,6 +68,5 @@
         line-height: 17px;
       }
     }
-    margin-bottom: 2rem;
   }
 }
