@@ -9,7 +9,7 @@ import * as compression from 'compression';
 
 enableProdMode();
 
-const PORT = process.env.PORT || 4200;
+const PORT = process.env.PORT || 8080;
 const DIST_FOLDER = join(process.cwd(), 'dist');
 
 const app = express();
@@ -35,5 +35,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`listening on http://localhost:${PORT}!`);
+  console.log(`listening on ${PORT}!`);
 });
