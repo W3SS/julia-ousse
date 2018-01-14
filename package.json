@@ -11,7 +11,7 @@
     "build:server": "webpack -p",
     "develop": "node dist/server.js",
     "serve": "node dist/server.js",
-    "predocker:build": "npm run build:prod",
+    "predocker:build": "npm run build",
     "docker:build": "docker build . -t mikesaprykin/julia-ousse",
     "docker:push": "docker push mikesaprykin/julia-ousse",
     "bump": "npm run bump:patch",
