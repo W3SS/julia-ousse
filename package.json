@@ -1,14 +1,16 @@
 {
   "name": "julia-ousse-universal",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ts-node server.ts",
-    "build": "ng build",
-    "build:prod": "ng build --prod && npm run build:server",
-    "build:server": "ng build --prod --app 1",
-    "develop": "nodemon --exec 'ts-node' server.ts",
+    "start": "ng serve --aot",
+    "build": "run-s build:client build:aot build:server",
+    "build:client": "ng build -prod --build-optimizer --app 0",
+    "build:aot": "ng build --aot --app 1",
+    "build:server": "webpack -p",
+    "develop": "node dist/server.js",
+    "serve": "node dist/server.js",
     "predocker:build": "npm run build:prod",
     "docker:build": "docker build . -t mikesaprykin/julia-ousse",
     "docker:push": "docker push mikesaprykin/julia-ousse",
@@ -26,25 +28,30 @@
     "node": "8.0.0",
     "npm": "5.4.2"
   },
+  "lint-staged": {
+    "*.ts": [
+      "yarn prettier",
+      "git add"
+    ]
+  },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^5.1.0",
-    "@angular/common": "^5.1.0",
-    "@angular/compiler": "^5.1.0",
-    "@angular/compiler-cli": "^5.1.0",
-    "@angular/core": "^5.1.0",
-    "@angular/forms": "^5.1.0",
-    "@angular/http": "^5.1.0",
-    "@angular/language-service": "^5.1.0",
-    "@angular/platform-browser": "^5.1.0",
-    "@angular/platform-browser-dynamic": "^5.1.0",
-    "@angular/platform-server": "^5.1.0",
-    "@angular/router": "^5.1.0",
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/platform-server": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "@angular/service-worker": "^5.2.0",
     "@ngrx/effects": "^4.1.1",
     "@ngrx/router-store": "^4.1.1",
     "@ngrx/store": "^4.1.1",
     "@ngrx/store-devtools": "^4.1.1",
-    "@types/node": "^8.0.56",
     "autotrack": "^2.4.1",
     "compression": "^1.7.1",
     "core-js": "^2.5.1",
@@ -58,18 +65,32 @@
     "zone.js": "^0.8.18"
   },
   "devDependencies": {
-    "@angular/cli": "^1.6.0",
-    "@types/jest": "^21.1.8",
+    "@angular/cli": "1.6.4",
+    "@angular/language-service": "^5.2.0",
+    "@types/jest": "^21.1.9",
     "@types/ramda": "^0.24.18",
+    "@types/node": "^8.5.2",
     "codecov": "^2.3.1",
     "codelyzer": "^4.0.1",
+    "husky": "^0.14.3",
     "jest": "^21.2.1",
-    "jest-preset-angular": "^4.0.0",
+    "jest-preset-angular": "^4.0.2",
     "protractor": "^5.2.1",
-    "tslint": "^5.8.0"
+    "lint-staged": "^6.0.0",
+    "npm-run-all": "^4.1.2",
+    "prettier": "^1.10.2",
+    "ts-loader": "^3.2.0",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "webpack-node-externals": "^1.6.0"
   },
   "jest": {
     "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "<rootDir>/src/test.ts"
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test.ts",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "index.ts"
+    ]
   }
 }

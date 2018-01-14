@@ -1,4 +1,4 @@
-# Julia Ousse Web Site | Version: v0.0.11
+# Julia Ousse Web Site | Version: v0.0.12
 
 [![StackShare](https://img.shields.io/badge/tech-stack-0690fa.svg?style=flat)](https://stackshare.io/MikeSaprykin/angular-cli-universal)
 [![CircleCI](https://circleci.com/gh/MikeSaprykin/julia-ousse/tree/master.svg?style=svg)](https://circleci.com/gh/MikeSaprykin/julia-ousse/tree/master)
@@ -29,9 +29,7 @@ Different modern technologies were used, while building the project:
 * [RxJS](https://github.com/Reactive-Extensions/RxJS) - reactive extension javascript library for FRP style of programming
 * [NodeJS ](https://nodejs.org/en/) - JavaScript server framework to serve pre-rendered application
 * [ExpressJS](http://expressjs.com/) - NodeJS framework to simplify server application building 
-* [Karma](https://karma-runner.github.io/1.0/index.html) - unit tests runner
-* [Jasmine](https://jasmine.github.io/) - core testing framework
-* [Protractor](http://www.protractortest.org/#/) - end-to-end testing tool
+* [Jest](https://facebook.github.io/jest/) - core unit testing framework
 * [CircleCI](https://circleci.com) - Continuous integration tool
 * [Docker](https://www.docker.com/) - Predictable container for deployment and running the app
 * [Codecov](https://codecov.io) - Code coverage tool
