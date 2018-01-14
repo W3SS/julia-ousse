@@ -4,7 +4,13 @@ import { MainComponent } from './containers';
 const appRoutes: Routes = [
   {
     path: '',
-    component: MainComponent
+    component: MainComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

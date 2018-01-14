@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { Observable } from 'rxjs/Observable';
@@ -15,8 +15,9 @@ export class MainComponent implements OnInit {
 
   sideBarOpen$: Observable<boolean>;
 
-  constructor(public store: Store<AppState>,
+  constructor(private store: Store<AppState>,
               private analytics: AnalyticsService) {
+    console.log(this.store);
     this.sideBarOpen$ = store.select(selectSideBar);
   }
 

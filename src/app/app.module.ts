@@ -9,16 +9,18 @@ import { ROOT_STORE_MODULE } from './store';
 import { ContainersModule } from './containers';
 import { routing } from './app.routing';
 
+console.log(ROOT_STORE_MODULE);
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    ContainersModule,
-    routing,
     ...ROOT_STORE_MODULE,
+    routing,
     BrowserModule.withServerTransition({ appId: 'julia-ousse' }),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    ContainersModule
   ],
   providers: [
     ...APP_PROVIDERS

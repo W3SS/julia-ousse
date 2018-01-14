@@ -4,12 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --aot",
     "build": "run-s build:client build:aot build:server",
     "build:client": "ng build -prod --build-optimizer --app 0",
     "build:aot": "ng build --aot --app 1",
     "build:server": "webpack -p",
     "develop": "node dist/server.js",
+    "serve": "node dist/server.js",
     "predocker:build": "npm run build:prod",
     "docker:build": "docker build . -t mikesaprykin/julia-ousse",
     "docker:push": "docker push mikesaprykin/julia-ousse",
@@ -86,6 +87,10 @@
   },
   "jest": {
     "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "<rootDir>/src/test.ts"
+    "setupTestFrameworkScriptFile": "<rootDir>/src/test.ts",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "index.ts"
+    ]
   }
 }
