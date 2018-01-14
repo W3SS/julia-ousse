@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable()
 export class AnalyticsService {
 
-  constructor() {
-    if (ga) {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
       ga('create', 'UA-110869659-1', 'auto');
       ga('require', 'cleanUrlTracker');
       ga('require', 'outboundLinkTracker');
@@ -13,7 +14,7 @@ export class AnalyticsService {
   }
 
   pageView(url: string) {
-    if (ga) {
+    if (isPlatformBrowser(this.platformId)) {
       ga('set', 'page', url);
       ga('send', 'pageview');
     }
