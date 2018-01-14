@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --aot",
+    "start": "node dist/server.js",
     "build": "run-s build:client build:aot build:server",
     "build:client": "ng build -prod --build-optimizer --app 0",
     "build:aot": "ng build --aot --app 1",
