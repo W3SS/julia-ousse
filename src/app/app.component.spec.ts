@@ -16,4 +16,7 @@ describe('AppComponent', () => {
       })
       .compileComponents();
   }));
+  it('true to be true', () => {
+    expect(true).toBe(true);
+  });
 });

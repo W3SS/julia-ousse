@@ -9,8 +9,6 @@ import { ROOT_STORE_MODULE } from './store';
 import { ContainersModule } from './containers';
 import { routing } from './app.routing';
 
-console.log(ROOT_STORE_MODULE);
-
 @NgModule({
   declarations: [
     AppComponent
