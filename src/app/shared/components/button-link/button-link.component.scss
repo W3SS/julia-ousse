@@ -8,7 +8,8 @@
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    background: $bar-color;
+    //background: $bar-color;
+    background-image: linear-gradient(to right, #221e1e, #292424, #302a2a, #373030, #3e3636);
     transition: $all-ease-in-out;
     @include no-user-select();
     font-family: 'CenturyGothic', sans-serif;

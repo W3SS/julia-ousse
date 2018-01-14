@@ -17,7 +17,6 @@ export class MainComponent implements OnInit {
 
   constructor(private store: Store<AppState>,
               private analytics: AnalyticsService) {
-    console.log(this.store);
     this.sideBarOpen$ = store.select(selectSideBar);
   }
 

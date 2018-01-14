@@ -8,8 +8,9 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 30px;
-  width: 35px;
+  height: 40px;
+  width: 40px;
+  margin: 5px 5px;
   position: relative;
   overflow: hidden;
   z-index: 120;
@@ -17,9 +18,9 @@
 
   &__bar {
     display: block;
-    width: 22px;
-    height: 2px;
-    margin: 2px 0;
+    width: 32px;
+    height: 3px;
+    margin: 3px 0;
     background: $bar-color;
     transition: all 0.1s ease-in-out;
     opacity: 1;
@@ -27,13 +28,13 @@
 
   &.active {
       .hamburger__bar:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
       }
       .hamburger__bar:nth-child(2) {
         opacity: 0;
       }
       .hamburger__bar:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-10px) rotate(-45deg);
       }
     }
 
