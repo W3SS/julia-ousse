@@ -17,6 +17,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
+      "serviceWorker": true,
       "stylePreprocessorOptions": {
         "includePaths": [
           "scss"
@@ -32,18 +33,19 @@
       }
     },
     {
-      "platform": "server",
       "root": "src",
       "outDir": "dist/server",
       "assets": [
         "assets"
       ],
+      "platform": "server",
       "index": "index.html",
       "main": "main.server.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.server.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
+      "serviceWorker": true,
       "styles": [
         "styles.scss"
       ],
@@ -59,14 +61,13 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      },
-      "serviceWorker": true
+      }
     },
     {
-      "platform": "server",
       "root": "src",
       "outDir": "dist/server",
       "assets": [],
+      "platform": "server",
       "index": "index.html",
       "main": "main.server.ts",
       "test": "test.ts",
@@ -107,6 +108,7 @@
   ],
   "defaults": {
     "styleExt": "scss",
-    "component": {}
+    "component": {
+    }
   }
 }
