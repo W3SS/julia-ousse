@@ -20,10 +20,10 @@
     @include iphone5(null, 75px);
   }
   &-title {
+    position: relative;
+    z-index: 2;
     &__brand {
       &-name {
-        position: relative;
-        z-index: 111;
         font-family: 'ShellaheraScriptDemo', sans-serif;
         color: #302a2a;
         font-size: 80px;
