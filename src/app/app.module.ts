@@ -17,7 +17,7 @@ import { routing } from './app.routing';
     ...ROOT_STORE_MODULE,
     routing,
     BrowserModule.withServerTransition({ appId: 'julia-ousse' }),
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('/browser/ngsw-worker.js', { enabled: environment.production }),
     ContainersModule
   ],
   providers: [
