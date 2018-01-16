@@ -5,11 +5,13 @@ import { RouterModule } from '@angular/router';
 import { HamburgerComponent } from './hamburger';
 import { SideBarComponent } from './side-bar';
 import { ButtonLinkComponent } from './button-link';
+import { DirectivesModule } from '../directives';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    DirectivesModule
   ],
   declarations: [
     HamburgerComponent,

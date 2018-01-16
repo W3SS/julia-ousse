@@ -10,6 +10,7 @@
   transition: $all-ease-in-out;
   top: 0;
   overflow: hidden;
+  z-index: 9999;
 
   &.active {
     width: 75%;
@@ -35,6 +36,7 @@
     padding: 0 2rem;
     transition: $linear;
     border-top: 1px solid $bar-color;
+    @include no-user-select();
 
     @include iphone7(){
       padding: 1rem 2rem;

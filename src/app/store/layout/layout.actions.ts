@@ -7,6 +7,10 @@ export const toggleSideBar = (): Action => {
   };
 };
 
+export const closeSideBar = (): Action => ({
+  type: types.CLOSE_SIDE_BAR
+});
+
 export const showMainPageVideo = (): Action => {
   return {
     type: types.SHOW_MAIN_PAGE_VIDEO
