@@ -1,7 +1,11 @@
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './containers';
+import { MainComponent, PortfolioComponent } from './containers';
 
 const appRoutes: Routes = [
+  {
+    path: 'portfolio',
+    component: PortfolioComponent
+  },
   {
     path: '',
     component: MainComponent,

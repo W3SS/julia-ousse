@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
@@ -9,22 +9,30 @@ import {
 import {
   toggleSideBar
 } from '../../store/layout';
+import {
+  closeSideBar
+} from '../../store/layout/layout.actions';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent {
 
-  sideBarOpen: Observable<boolean>;
+  public readonly sideBarOpen$: Observable<boolean>;
 
   constructor(public store: Store<AppState>) {
-    this.sideBarOpen = store.select(selectSideBar);
+    this.sideBarOpen$ = <any>store.select(selectSideBar);
   }
 
   toggleSideBar() {
     this.store.dispatch(toggleSideBar());
+  }
+
+  closeSideBar(): void {
+    this.store.dispatch(closeSideBar());
   }
 
 }

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../shared/directives';
 import { ComponentsModule } from '../shared/components';
 
@@ -9,12 +10,15 @@ import { MainServicesComponent } from './main-services';
 import { HeaderComponent } from './header';
 import { MainComponent } from './main';
 import { FooterComponent } from './footer';
+import { PortfolioComponent } from './portfolio';
+
 
 @NgModule({
   imports: [
     CommonModule,
     DirectivesModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
   ],
   declarations: [
     HeaderComponent,
@@ -22,7 +26,8 @@ import { FooterComponent } from './footer';
     MainAboutMeComponent,
     MainPortfolioComponent,
     MainServicesComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioComponent
   ],
   exports: [
     HeaderComponent,
