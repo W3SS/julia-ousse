@@ -10,7 +10,12 @@ describe('SideBarComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ SideBarComponent ]
     })
-    .compileComponents();
+      .overrideComponent(SideBarComponent, {
+        set: {
+          template: '<div></div>'
+        }
+      })
+      .compileComponents();
   }));
 
   beforeEach(() => {
