@@ -5,6 +5,15 @@
 
   .side-bar {
     top: 127px;
+    @include iphone7() {
+      top: 120px;
+    }
+    @include iphone6() {
+      top: 100px;
+    }
+    @include iphone5() {
+      top: 80px;
+    }
   }
 
   .header {
@@ -25,9 +34,12 @@
       @include iphone7(null, 115px);
       @include iphone6(null, 95px);
       @include iphone5(null, 75px);
+      @include no-user-select();
     }
     &-title {
+      cursor: pointer;
       position: relative;
+      @include no-user-select();
       z-index: 2;
       &__brand {
         &-name {

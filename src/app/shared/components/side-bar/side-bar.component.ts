@@ -1,7 +1,7 @@
 import {
-  Component,
+  Component, EventEmitter,
   Input,
-  OnInit,
+  OnInit, Output,
   ViewEncapsulation
 } from '@angular/core';
 
@@ -12,6 +12,9 @@ import {
   encapsulation: ViewEncapsulation.None
 })
 export class SideBarComponent implements OnInit {
+
+  @Output()
+  clickedOutside = new EventEmitter();
 
   @Input()
   active: boolean;

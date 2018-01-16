@@ -36,6 +36,7 @@
     padding: 0 2rem;
     transition: $linear;
     border-top: 1px solid $bar-color;
+    @include no-user-select();
 
     @include iphone7(){
       padding: 1rem 2rem;

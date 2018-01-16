@@ -4,7 +4,9 @@
       <img class="header__logo"
            src="../../../assets/images/logo.png"
            alt="Julia Ousse Logo">
-      <div class="header-title">
+      <div class="header-title"
+           [routerLink]="['/']"
+      >
         <h1 class="header-title__brand-name">
           Julia Ousse
         </h1>
@@ -14,6 +16,8 @@
       </div>
       <div class="header-hamburger">
         <hamburger (onHamburgerClick)="toggleSideBar()"
+                   (clickOutside)="closeSideBar()"
+                   [clickOutsideCondition]="sideBarOpen$ | async"
                    [active]="sideBarOpen$ | async">
         </hamburger>
       </div>

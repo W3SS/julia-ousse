@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { DirectivesModule } from '../shared/directives';
 import { ComponentsModule } from '../shared/components';
 
@@ -16,7 +17,8 @@ import { PortfolioComponent } from './portfolio';
   imports: [
     CommonModule,
     DirectivesModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
   ],
   declarations: [
     HeaderComponent,

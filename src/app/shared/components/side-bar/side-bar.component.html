@@ -1,7 +1,12 @@
 <div class="side-bar" [class.active]="active">
   <div class="side-bar-item"
-       [routerLink]="['/']"
-       routerLinkActive="active">
+       routerLink="/"
+       routerLinkActive="active"
+       [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <p class="side-bar-item__text">Главная</p>
+  </div>
+  <div class="side-bar-item">
     <p class="side-bar-item__text">Обо мне</p>
   </div>
   <div class="side-bar-item"

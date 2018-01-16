@@ -5,4 +5,20 @@
       ПОРТФОЛИО
     </h2>
   </div>
+  <div class="portfolio-listing">
+      <div
+        *ngFor="let column of imageUrls; let i = index"
+        class="portfolio-listing-column"
+      >
+        <div class="portfolio-listing-column__item-wrapper"
+             *ngFor="let item of column">
+          <div class="portfolio-listing-column__item-wrapper-overlay">
+            <p class="portfolio-listing-column__item-wrapper-overlay__text">
+              ALBUM NUMBER # {{ i + 1 }}
+            </p>
+          </div>
+          <img [attr.src]="item.url" />
+        </div>
+      </div>
+  </div>
 </div>

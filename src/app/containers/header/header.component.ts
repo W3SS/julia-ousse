@@ -9,6 +9,9 @@ import {
 import {
   toggleSideBar
 } from '../../store/layout';
+import {
+  closeSideBar
+} from '../../store/layout/layout.actions';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +29,10 @@ export class HeaderComponent {
 
   toggleSideBar() {
     this.store.dispatch(toggleSideBar());
+  }
+
+  closeSideBar(): void {
+    this.store.dispatch(closeSideBar());
   }
 
 }

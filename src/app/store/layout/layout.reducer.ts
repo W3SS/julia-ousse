@@ -22,6 +22,10 @@ const lookUp: ReducerLookUp<LayoutState> = {
   [types.TOGGLE_SIDE_BAR]: (state, action) => {
     return {...state, sideBarOpen: !state.sideBarOpen};
   },
+  [types.CLOSE_SIDE_BAR]: (state, action) => ({
+    ...state,
+    sideBarOpen: false
+  }),
   [types.SHOW_MAIN_PAGE_VIDEO]: (state, action) => {
     return {...state, mainPageVideo: true};
   }
