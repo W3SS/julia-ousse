@@ -9,6 +9,8 @@ import { MainServicesComponent } from './main-services';
 import { HeaderComponent } from './header';
 import { MainComponent } from './main';
 import { FooterComponent } from './footer';
+import { PortfolioComponent } from './portfolio';
+
 
 @NgModule({
   imports: [
@@ -22,7 +24,8 @@ import { FooterComponent } from './footer';
     MainAboutMeComponent,
     MainPortfolioComponent,
     MainServicesComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioComponent
   ],
   exports: [
     HeaderComponent,

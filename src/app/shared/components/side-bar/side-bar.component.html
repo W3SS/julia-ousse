@@ -1,8 +1,12 @@
 <div class="side-bar" [class.active]="active">
-  <div class="side-bar-item active">
+  <div class="side-bar-item"
+       [routerLink]="['/']"
+       routerLinkActive="active">
     <p class="side-bar-item__text">Обо мне</p>
   </div>
-  <div class="side-bar-item">
+  <div class="side-bar-item"
+       routerLink="/portfolio"
+       routerLinkActive="active">
     <p class="side-bar-item__text">Портфолио</p>
   </div>
   <div class="side-bar-item">

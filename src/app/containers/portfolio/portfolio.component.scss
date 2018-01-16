@@ -1,0 +1,24 @@
+@import "mixins";
+@import "colors";
+@import "shadows";
+
+.portfolio {
+
+  height: 600px;
+
+  &__top-border {
+    @include gradient();
+    height: 1px;
+    width: 100%;
+    display: block;
+    box-shadow: $elevation-1;
+  }
+  &-header__title {
+    margin-top: 15px;
+    font-family: 'CenturyGothic', sans-serif;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 300;
+    color: $bar-color;
+  }
+}
